@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messagerie - Courrier CBC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="cr-body">
+    <div class="cr-app">
+        <!-- Sidebar Navigation -->
+        <aside class="cr-sidebar">
+            <a href="#" class="cr-sidebar__logo">C</a>
+            <nav class="cr-sidebar__nav">
+                <a href="#" class="cr-sidebar__link">
+                    <i class="fa-solid fa-house cr-icon"></i>
+                    <span class="cr-sidebar__tooltip">Tableau de bord</span>
+                </a>
+                <a href="#" class="cr-sidebar__link">
+                    <i class="fa-solid fa-file-invoice cr-icon"></i>
+                    <span class="cr-sidebar__tooltip">Factures</span>
+                </a>
+                <a href="#" class="cr-sidebar__link is-active cr-sidebar__link--dot">
+                    <i class="fa-solid fa-envelope cr-icon"></i>
+                    <span class="cr-sidebar__tooltip">Messagerie</span>
+                </a>
+                <a href="#" class="cr-sidebar__link">
+                    <i class="fa-solid fa-folder cr-icon"></i>
+                    <span class="cr-sidebar__tooltip">Documents</span>
+                </a>
+            </nav>
+            <div class="cr-sidebar__footer">
+                <div class="cr-sidebar__avatar">JF</div>
+                <span class="cr-sidebar__tooltip">Jules Fotso</span>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="cr-app__main">
+            <!-- Topbar -->
+            <header class="cr-topbar">
+                <div class="cr-search">
+                    <i class="fa-solid fa-magnifying-glass cr-search__icon"></i>
+                    <input type="text" class="cr-search__input" placeholder="Rechercher un message, un document, une facture...">
+                    <kbd class="cr-search__kbd">⌘K</kbd>
+                </div>
+                <div class="cr-topbar__actions">
+                    <span class="cr-topbar__role">Chef Service Achat</span>
+                    <button class="cr-icon-btn cr-icon-btn--dot" type="button">
+                        <i class="fa-solid fa-bell cr-icon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <main class="cr-app__content">
+                <div class="cr-msg-page">
+                    <!-- Page Header -->
+                    <div class="cr-msg-header">
+                        <div class="cr-msg-header__title-group">
+                            <span class="cr-msg-header__eyebrow">Communication</span>
+                            <h1 class="cr-msg-header__title">Messagerie</h1>
+                        </div>
+                        <button class="cr-msg-header__action" type="button">
+                            <i class="fa-solid fa-plus cr-icon"></i>
+                            <span>Nouveau message</span>
+                        </button>
+                    </div>
+
+                    <!-- Messagerie Container -->
+                    <div class="cr-msg-container">
+                        <!-- Folders Navigation -->
+                        <div class="cr-msg-folders">
+                            <a href="#" class="cr-msg-folder is-active">
+                                <span>Boîte de réception</span>
+                                <span class="cr-msg-folder__badge">4</span>
+                            </a>
+                            <a href="#" class="cr-msg-folder">
+                                <span>Messages envoyés</span>
+                            </a>
+                            <a href="#" class="cr-msg-folder">
+                                <span>Brouillons</span>
+                                <span class="cr-msg-folder__badge">1</span>
+                            </a>
+                            <a href="#" class="cr-msg-folder">
+                                <span>Archivés</span>
+                            </a>
+                        </div>
+
+                        <!-- Thread List -->
+                        <div class="cr-msg-threads">
+                            <!-- Thread 1 (Active) -->
+                            <div class="cr-msg-thread is-active">
+                                <div class="cr-msg-thread__avatar">MF</div>
+                                <div class="cr-msg-thread__body">
+                                    <div class="cr-msg-thread__head">
+                                        <h3 class="cr-msg-thread__author">Marie Fokou</h3>
+                                        <span class="cr-msg-thread__time">09:42</span>
+                                    </div>
+                                    <div class="cr-msg-thread__subject">Validation · FAC-2026-0142</div>
+                                    <div class="cr-msg-thread__preview">Pouvez-vous confirmer le centre de coût avant ...</div>
+                                </div>
+                            </div>
+
+                            <!-- Thread 2 -->
+                            <div class="cr-msg-thread">
+                                <div class="cr-msg-thread__avatar">ÉC</div>
+                                <div class="cr-msg-thread__body">
+                                    <div class="cr-msg-thread__head">
+                                        <h3 class="cr-msg-thread__author">Équipe Comptabilité</h3>
+                                        <span class="cr-msg-thread__time">Hier</span>
+                                    </div>
+                                    <div class="cr-msg-thread__subject">Paiement groupé de juin</div>
+                                    <div class="cr-msg-thread__preview">Le fichier de virement est disponible pour contrôle.</div>
+                                </div>
+                            </div>
+
+                            <!-- Thread 3 -->
+                            <div class="cr-msg-thread">
+                                <div class="cr-msg-thread__avatar">SE</div>
+                                <div class="cr-msg-thread__body">
+                                    <div class="cr-msg-thread__head">
+                                        <h3 class="cr-msg-thread__author">Samuel Ekani</h3>
+                                        <span class="cr-msg-thread__time">24 juin</span>
+                                    </div>
+                                    <div class="cr-msg-thread__subject">Document manquant</div>
+                                    <div class="cr-msg-thread__preview">Merci d'ajouter le bon de commande associé.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chat Detail Pane -->
+                        <div class="cr-msg-chat">
+                            <!-- Chat Header -->
+                            <div class="cr-msg-chat__head">
+                                <div class="cr-msg-chat__user">
+                                    <div class="cr-msg-chat__avatar">MF</div>
+                                    <div class="cr-msg-chat__meta">
+                                        <h2 class="cr-msg-chat__name">Marie Fokou</h2>
+                                        <span class="cr-msg-chat__role">Responsable · Direction financière</span>
+                                    </div>
+                                </div>
+                                <button class="cr-msg-chat__menu-btn" type="button" aria-label="More options">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                            </div>
+
+                            <!-- Chat Body Messages -->
+                            <div class="cr-msg-chat__body">
+                                <!-- Incoming message -->
+                                <div class="cr-msg-bubble cr-msg-bubble--incoming">
+                                    <div class="cr-msg-bubble__content">
+                                        <p class="cr-msg-bubble__text">Bonjour Jules, pouvez-vous confirmer le centre de coût avant validation de la facture FAC-2026-0142 ?</p>
+                                    </div>
+                                    <span class="cr-msg-bubble__time">09:42</span>
+                                </div>
+
+                                <!-- Outgoing message -->
+                                <div class="cr-msg-bubble cr-msg-bubble--outgoing">
+                                    <div class="cr-msg-bubble__content">
+                                        <p class="cr-msg-bubble__text">Bonjour Marie, il s'agit bien du centre DSI / Infrastructure. Le bon de commande est également joint.</p>
+                                    </div>
+                                    <span class="cr-msg-bubble__time">09:48</span>
+                                </div>
+                            </div>
+
+                            <!-- Chat Reply Footer Input -->
+                            <div class="cr-msg-chat__footer">
+                                <div class="cr-msg-reply">
+                                    <input type="text" class="cr-msg-reply__input" placeholder="Écrire une réponse...">
+                                    <button class="cr-msg-reply__send" type="button" aria-label="Envoyer">
+                                        <i class="fa-solid fa-arrow-right cr-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="cr-footer">
+                <span>© 2026 Courrier CBC — Tous droits réservés.</span>
+                <a href="#" class="cr-footer__link">Support technique</a>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
