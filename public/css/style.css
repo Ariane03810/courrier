@@ -3202,4 +3202,244 @@ textarea {
         border-right: none;
         border-bottom: 1px solid var(--cr-color-border);
     }
+}/* ==========================================================================
+   PAGE : PROFIL
+   ========================================================================== */
+
+.cr-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Bannière sombre avec motif géométrique abstrait */
+.cr-profile__cover {
+    position: relative;
+    overflow: hidden;
+    height: 14rem;
+    border-radius: 1.25rem;
+    background-color: #1A1A1A;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(244, 208, 63, 0.08) 0%, transparent 50%);
+}
+
+.cr-profile__cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.03) 25%, transparent 50%, rgba(255, 255, 255, 0.05) 75%, transparent 100%),
+        linear-gradient(225deg, rgba(26, 26, 26, 0.8) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.cr-profile__cover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='400' viewBox='0 0 1000 400'%3E%3Cg fill-opacity='0.08'%3E%3Cpolygon fill='%23FFFFFF' points='0,0 350,0 200,400 0,300'/%3E%3Cpolygon fill='%23F4D03F' points='350,0 700,0 550,400 200,400'/%3E%3Cpolygon fill='%23FFFFFF' points='700,0 1000,0 900,400 550,400'/%3E%3Cpolygon fill='%231A1A1A' points='150,0 450,250 250,400'/%3E%3Cpolygon fill='%23FFFFFF' points='500,50 800,300 600,400'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.95;
+    pointer-events: none;
+}
+
+/* Corps */
+.cr-profile__body {
+    display: grid;
+    grid-template-columns: 22rem minmax(0, 1fr);
+    gap: 1.5rem;
+    margin-top: -6rem;
+    padding: 0 1.5rem;
+}
+
+/* Carte identité */
+.cr-profile__card {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    border: 1px solid var(--cr-color-border);
+    border-radius: 1.25rem;
+    background: var(--cr-color-bg-light);
+    box-shadow: 0 1rem 2.5rem rgba(26, 26, 26, 0.08);
+    text-align: center;
+}
+
+.cr-profile__avatar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 1.25rem;
+    border-radius: 50%;
+    background: var(--cr-color-primary);
+    color: var(--cr-color-text);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.cr-profile__avatar-edit {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 2px solid var(--cr-color-bg-light);
+    border-radius: 50%;
+    background: var(--cr-color-bg-dark);
+    color: var(--cr-color-primary);
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.cr-profile__name {
+    margin: 0;
+    font-size: 1.375rem;
+    font-weight: 800;
+}
+
+.cr-profile__role {
+    margin: 0.375rem 0 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+    color: var(--cr-color-neutral);
+}
+
+.cr-profile__dept {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+    color: #555555;
+}
+
+/* Statistiques */
+.cr-profile__stats {
+    width: 100%;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--cr-color-border);
+}
+
+.cr-profile__stats li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--cr-color-border);
+    font-size: 0.875rem;
+}
+
+.cr-profile__stats li span {
+    color: #555555;
+}
+
+.cr-profile__stats li strong {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Colonne principale */
+.cr-profile__main {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Formulaire */
+.cr-profile__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 2rem;
+    border: 1px solid var(--cr-color-border);
+    border-radius: 1.25rem;
+    background: var(--cr-color-bg-light);
+    box-shadow: 0 1rem 2.5rem rgba(26, 26, 26, 0.05);
+}
+
+.cr-profile__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+/* Champs */
+.cr-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cr-field__label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #555555;
+}
+
+.cr-field__input {
+    width: 100%;
+    height: 3rem;
+    padding: 0 1rem;
+    border: 1px solid var(--cr-color-border);
+    border-radius: 0.75rem;
+    background: var(--cr-color-bg-light);
+    color: var(--cr-color-text);
+    font-size: 0.9375rem;
+    outline: none;
+    transition: border-color var(--cr-transition);
+}
+
+.cr-field__input:focus {
+    border-color: var(--cr-color-primary);
+}
+
+.cr-field__input:disabled {
+    background: #F7F7F7;
+    color: #6B6B6B;
+    cursor: not-allowed;
+}
+
+/* Bouton Mettre à jour */
+.cr-profile__submit {
+    align-self: flex-start;
+    height: 3rem;
+    padding: 0 1.75rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: var(--cr-color-primary);
+    color: var(--cr-color-text);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background var(--cr-transition);
+}
+
+.cr-profile__submit:hover {
+    background: var(--cr-color-primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    .cr-profile__body {
+        grid-template-columns: minmax(0, 1fr);
+        margin-top: -4rem;
+        padding: 0;
+    }
+
+    .cr-profile__row {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }

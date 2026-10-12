@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Courrier CBC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="cr-body cr-scale">
+    <div class="cr-app">
+        <!-- Sidebar -->
+        <aside class="cr-sidebar">
+            <a href="#" class="cr-sidebar__logo">C</a>
+            <nav class="cr-sidebar__nav">
+                <a href="#" class="cr-sidebar__link">
+                    <span class="cr-icon"><i class="fa-solid fa-house"></i></span>
+                </a>
+                <a href="#" class="cr-sidebar__link">
+                    <span class="cr-icon"><i class="fa-solid fa-file-invoice"></i></span>
+                </a>
+                <a href="#" class="cr-sidebar__link">
+                    <span class="cr-icon"><i class="fa-solid fa-envelope"></i></span>
+                </a>
+                <a href="#" class="cr-sidebar__link is-active">
+                    <span class="cr-icon"><i class="fa-solid fa-folder"></i></span>
+                </a>
+            </nav>
+            <div class="cr-sidebar__footer">
+                <div class="cr-sidebar__avatar">MN</div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="cr-app__main">
+            <!-- Topbar -->
+            <header class="cr-topbar">
+                <div class="cr-search">
+                    <span class="cr-search__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="cr-search__input" placeholder="Rechercher un message, un document, une facture...">
+                    <kbd class="cr-search__kbd">⌘K</kbd>
+                </div>
+                <div class="cr-topbar__actions">
+                    <div class="cr-topbar__role">Agent Achat</div>
+                    <button class="cr-icon-btn cr-icon-btn--dot">
+                        <i class="fa-solid fa-bell"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <div class="cr-app__content">
+                <div class="cr-profile">
+                    <!-- Bannière -->
+                    <div class="cr-profile__cover"></div>
+
+                    <!-- Contenu -->
+                    <div class="cr-profile__grid">
+                        <!-- Colonne gauche : carte identité -->
+                        <div class="cr-profile__sidebar">
+                            <div class="cr-profile__card">
+                                <div class="cr-profile__avatar-wrap">
+                                    <div class="cr-profile__avatar">MN</div>
+                                    <button class="cr-profile__avatar-btn" type="button" title="Changer de photo">
+                                        <i class="fa-solid fa-camera"></i>
+                                    </button>
+                                </div>
+
+                                <h2 class="cr-profile__name">Marc N'Dri</h2>
+                                <p class="cr-profile__role">Agent Achat</p>
+                                <p class="cr-profile__dept">Direction financière</p>
+
+                                <div class="cr-profile__stats">
+                                    <div class="cr-profile__stat">
+                                        <span>Dossiers traités</span>
+                                        <strong>38</strong>
+                                    </div>
+                                    <div class="cr-profile__stat">
+                                        <span>Validations</span>
+                                        <strong>26</strong>
+                                    </div>
+                                    <div class="cr-profile__stat">
+                                        <span>En cours</span>
+                                        <strong>4</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Formulaire -->
+                        <div class="cr-profile__main">
+                            <div class="cr-profile__card">
+                                <h3 class="cr-profile__title">Informations personnelles</h3>
+
+                                <div class="cr-profile__form">
+                                    <div class="cr-profile__row">
+                                        <div class="cr-profile__field">
+                                            <label class="cr-profile__label">Prénom</label>
+                                            <input type="text" class="cr-profile__input" value="Marc">
+                                        </div>
+                                        <div class="cr-profile__field">
+                                            <label class="cr-profile__label">Nom</label>
+                                            <input type="text" class="cr-profile__input" value="N'Dri">
+                                        </div>
+                                    </div>
+
+                                    <div class="cr-profile__row">
+                                        <div class="cr-profile__field">
+                                            <label class="cr-profile__label">Adresse e-mail</label>
+                                            <input type="email" class="cr-profile__input" value="marc.ndri@courriercbc.ci">
+                                        </div>
+                                        <div class="cr-profile__field">
+                                            <label class="cr-profile__label">Téléphone</label>
+                                            <input type="tel" class="cr-profile__input" value="+225 07 08 09 10 11">
+                                        </div>
+                                    </div>
+
+                                    <div class="cr-profile__row">
+                                        <div class="cr-profile__field">
+                                            <label class="cr-profile__label">Rôle</label>
+                                            <input type="text" class="cr-profile__input" value="Agent Achat" disabled>
+                                        </div>
+                                        <div class="cr-profile__field">
+                                            <label class="cr-profile__label">Direction / Service</label>
+                                            <input type="text" class="cr-profile__input" value="Direction financière" disabled>
+                                        </div>
+                                    </div>
+
+                                    <div class="cr-profile__actions">
+                                        <button class="cr-btn cr-btn--dark" type="button">Enregistrer les modifications</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cr-profile__card">
+                                <h3 class="cr-profile__title">Sécurité &amp; Mot de passe</h3>
+
+                                <div class="cr-profile__form">
+                                    <div class="cr-profile__field">
+                                        <label class="cr-profile__label">Mot de passe actuel</label>
+                                        <input type="password" class="cr-profile__input" placeholder="••••••••">
+                                    </div>
+
+                                    <div class="cr-profile__row">
+                                        <div class="cr-profile__field">
+                                            <label class="cr-profile__label">Nouveau mot de passe</label>
+                                            <input type="password" class="cr-profile__input" placeholder="••••••••">
+                                        </div>
+                                        <div class="cr-profile__field">
+                                            <label class="cr-profile__label">Confirmer le mot de passe</label>
+                                            <input type="password" class="cr-profile__input" placeholder="••••••••">
+                                        </div>
+                                    </div>
+
+                                    <div class="cr-profile__actions">
+                                        <button class="cr-btn cr-btn--dark" type="button">Mettre à jour le mot de passe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
